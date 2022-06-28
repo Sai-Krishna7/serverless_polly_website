@@ -9,3 +9,10 @@ Then, it triggers an SNS notification thus triggering a new lambda function that
 
 2. Users want to hear the mp3 file. Go to website trigger a gateway call, trigger a get lambda request and restore saved data from DynamoDB.
 Then use Alexa Skill to read out the mp3 file stored in DynamoDB.
+
+Steps:
+1. DynamoDB:
+    Create a table called posts to act as a database and store the mp3 file info for example.
+
+2. S3 buckets:
+    Create 2 new S3 buckets. One for the website that hosts a static webpage and the other to store the text and mp3 files.

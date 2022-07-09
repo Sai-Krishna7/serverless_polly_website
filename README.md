@@ -17,3 +17,7 @@ Steps:
 2. S3 buckets:
     Create 2 new S3 buckets. One for the website that hosts a static webpage and the other to store the text and mp3 files.
     Within that for the website S3 bucket adjust the bucket poilicy so that it allows getObject requests in read only.
+
+    3. Create an SNS topic 
+
+    4. Create IAM role to allow lambda funcitons to commmunicate with S3, SNS and DynamoDB. Lambda should now have permission to use and execute 

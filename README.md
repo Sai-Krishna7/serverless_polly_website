@@ -20,4 +20,7 @@ Steps:
 
     3. Create an SNS topic 
 
-    4. Create IAM role to allow lambda funcitons to commmunicate with S3, SNS and DynamoDB. Lambda should now have permission to use and execute 
+    4. Create IAM role to allow lambda funcitons to commmunicate with S3, SNS and DynamoDB. Lambda should now have permission to use and execute.
+        * Faced issues with testing the Lambda function. Had to convert the boto3 code to support python 3.6. 
+        * Then added AWSDynamoDBFullAccess and AWSSNSFullAccess Policies to the Post_Reader_NewPost iam role.
+     

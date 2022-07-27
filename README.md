@@ -24,3 +24,7 @@ Steps:
         * Faced issues with testing the Lambda function. Had to convert the boto3 code to support python 3.6. 
         * Then added AWSDynamoDBFullAccess and AWSSNSFullAccess Policies to the Post_Reader_NewPost iam role.
     - Post_Reader_NewPost takes this text store it in DynamoDB and pass it to SNS which in turn triggers another Lambda function. 
+    - Tested PostReader_GetPost lambda function with custom testing template. Imported boto3 module and saved it in a venv and uploaded the python scipt file as a zip file with necessary dependencies.
+    Passed it to the Lambda function using an predesigned S3 location url since file size was too large for inline editing.
+
+    5. API Gateway - Using REST API's to create a POST http request to the PostReader_NewPost Lambda function.
